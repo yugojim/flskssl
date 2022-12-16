@@ -2,7 +2,8 @@ FROM nginx
 #COPY . /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY star.chimei.org.tw.crt /etc/nginx/ssl.crt
-COPY star.chimei.org.tw.key /etc/nginx/ssl.key
+COPY ssl.csr /etc/nginx/ssl.csr
+COPY ssl.key /etc/nginx/ssl.key
+
 EXPOSE 80
 EXPOSE 443
